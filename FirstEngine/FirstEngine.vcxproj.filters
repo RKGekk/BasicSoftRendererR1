@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="FastDelegate">
+      <UniqueIdentifier>{d6decb8f-1571-4548-84a9-80a401aa1981}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main">
+      <UniqueIdentifier>{b9cd9980-9db6-4cad-b260-247450125ecb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TinyXml">
+      <UniqueIdentifier>{ab180888-bc20-4563-9c59-881906fcacbd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GZip">
+      <UniqueIdentifier>{6fec1642-a1e0-4dac-80a4-c5c5d28e40db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{0351976e-9049-4bb1-a844-fcc38444f67f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TinyObjLoader">
+      <UniqueIdentifier>{5bda17e4-ed69-4690-928c-05d16926ddad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{0d737dde-e65c-41a4-9537-7adc6c200b18}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="FastDelegate.h">
+      <Filter>FastDelegate</Filter>
+    </ClInclude>
+    <ClInclude Include="FastDelegateBind.h">
+      <Filter>FastDelegate</Filter>
+    </ClInclude>
+    <ClInclude Include="tinystr.h">
+      <Filter>TinyXml</Filter>
+    </ClInclude>
+    <ClInclude Include="tinyxml.h">
+      <Filter>TinyXml</Filter>
+    </ClInclude>
+    <ClInclude Include="stringUtility.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="memoryUtility.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="crc32.h">
+      <Filter>GZip</Filter>
+    </ClInclude>
+    <ClInclude Include="deflate.h">
+      <Filter>GZip</Filter>
+    </ClInclude>
+    <ClInclude Include="gzguts.h">
+      <Filter>GZip</Filter>
+    </ClInclude>
+    <ClInclude Include="inffast.h">
+      <Filter>GZip</Filter>
+    </ClInclude>
+    <ClInclude Include="inffixed.h">
+      <Filter>GZip</Filter>
+    </ClInclude>
+    <ClInclude Include="inflate.h">
+      <Filter>GZip</Filter>
+    </ClInclude>
+    <ClInclude Include="inftrees.h">
+      <Filter>GZip</Filter>
+    </ClInclude>
+    <ClInclude Include="trees.h">
+      <Filter>GZip</Filter>
+    </ClInclude>
+    <ClInclude Include="zconf.h">
+      <Filter>GZip</Filter>
+    </ClInclude>
+    <ClInclude Include="zlib.h">
+      <Filter>GZip</Filter>
+    </ClInclude>
+    <ClInclude Include="zutil.h">
+      <Filter>GZip</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="SystemClass.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="GameTimer.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="InputClass.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="EngineOptions.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphicsClass.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="D3DClass.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureClass.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureHolder.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureShaderClass.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraClass.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="GameViewType.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="DxException.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="ColorIntegers.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelClass.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="GDIPlusManager.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="tiny_obj_loader.h">
+      <Filter>TinyObjLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="IndexedTriangleList.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="ZBuffer.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Wall.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="SpecularPhongPointEffect.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Triangle.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Vertex.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="NDCScreenTransformer.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Plane.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="SpecularPhongPointPipeline.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="SpecularPhongPointScene.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="tinystr.cpp">
+      <Filter>TinyXml</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyxml.cpp">
+      <Filter>TinyXml</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyxmlerror.cpp">
+      <Filter>TinyXml</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyxmlparser.cpp">
+      <Filter>TinyXml</Filter>
+    </ClCompile>
+    <ClCompile Include="stringUtility.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="adler32.c">
+      <Filter>GZip</Filter>
+    </ClCompile>
+    <ClCompile Include="compress.c">
+      <Filter>GZip</Filter>
+    </ClCompile>
+    <ClCompile Include="crc32.c">
+      <Filter>GZip</Filter>
+    </ClCompile>
+    <ClCompile Include="deflate.c">
+      <Filter>GZip</Filter>
+    </ClCompile>
+    <ClCompile Include="gzclose.c">
+      <Filter>GZip</Filter>
+    </ClCompile>
+    <ClCompile Include="gzlib.c">
+      <Filter>GZip</Filter>
+    </ClCompile>
+    <ClCompile Include="gzread.c">
+      <Filter>GZip</Filter>
+    </ClCompile>
+    <ClCompile Include="gzwrite.c">
+      <Filter>GZip</Filter>
+    </ClCompile>
+    <ClCompile Include="infback.c">
+      <Filter>GZip</Filter>
+    </ClCompile>
+    <ClCompile Include="inffast.c">
+      <Filter>GZip</Filter>
+    </ClCompile>
+    <ClCompile Include="inflate.c">
+      <Filter>GZip</Filter>
+    </ClCompile>
+    <ClCompile Include="inftrees.c">
+      <Filter>GZip</Filter>
+    </ClCompile>
+    <ClCompile Include="trees.c">
+      <Filter>GZip</Filter>
+    </ClCompile>
+    <ClCompile Include="uncompr.c">
+      <Filter>GZip</Filter>
+    </ClCompile>
+    <ClCompile Include="zutil.c">
+      <Filter>GZip</Filter>
+    </ClCompile>
+    <ClCompile Include="GameTimer.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="InputClass.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="SystemClass.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="EngineOptions.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="D3DClass.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphicsClass.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureClass.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureHolder.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureShaderClass.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraClass.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="DxException.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelClass.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="GDIPlusManager.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="tiny_obj_loader.cpp">
+      <Filter>TinyObjLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="SpecularPhongPointPipeline.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="SpecularPhongPointScene.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BasicColorPixelShader.fx">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="BasicColorVertexShader.fx">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="BasicTexturePixelShader.fx">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="BasicTextureVertexShader.fx">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="10+Z.bmp">
+      <Filter>Resources</Filter>
+    </None>
+    <None Include="stone01.tga">
+      <Filter>Resources</Filter>
+    </None>
+    <None Include="stone02.tga">
+      <Filter>Resources</Filter>
+    </None>
+    <None Include="EngineOptions.xml">
+      <Filter>Resources</Filter>
+    </None>
+  </ItemGroup>
+</Project>
