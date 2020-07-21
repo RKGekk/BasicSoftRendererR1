@@ -2,10 +2,10 @@
 
 #include "GraphicsClass.h"
 
-SpecularPhongPointScene::SpecularPhongPointScene(const EngineOptions& options, std::shared_ptr<TextureClass> sysT, std::shared_ptr<TextureClass> wallT) : Scene("phong point shader scene free mesh") {
+SpecularPhongPointScene::SpecularPhongPointScene(TextureClass& sysT, TextureClass& wallT) : Scene("phong point shader scene free mesh") {
 
-	pZb = std::make_shared<ZBuffer>(options.m_screenWidth, options.m_screenHeight);
-	pipeline = std::make_shared<SpecularPhongPointPipeline>(options, sysT);
+	pZb = std::make_shared<ZBuffer>(sysT.GetWidth(), sysT.GetHeight());
+	pipeline = std::make_shared<SpecularPhongPointPipeline>(sysT);
 
 	// Set the initial position of the camera.
 	m_Camera.SetPosition(0.0f, 0.0f, -1.0f);
@@ -13,7 +13,7 @@ SpecularPhongPointScene::SpecularPhongPointScene(const EngineOptions& options, s
 
 	// load walls
 	DirectX::XMFLOAT4X4 wallWorld;
-	DirectX::XMMATRIX wallTrans = DirectX::XMMatrixTranslation(0.0f, 0.0f, width / 2.0f);
+	DirectX::XMMATRIX wallTrans = DirectX::XMMatrixTranslation(0.0f, 0.0f, 0.0f);
 	DirectX::XMStoreFloat4x4(&wallWorld, wallTrans);
 	walls.push_back({
 		wallT,
@@ -52,7 +52,7 @@ void SpecularPhongPointScene::Draw() {
 
 		pipeline->effect.vs.BindWorldView(worldView);
 		pipeline->effect.vs.BindProjection(prj);
-		pipeline->effect.ps.BindTexture(*w.pTex);
+		pipeline->effect.ps.BindTexture(w.pTex);
 		pipeline->Draw(w.model);
 	}
 }

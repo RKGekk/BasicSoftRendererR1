@@ -56,7 +56,7 @@ bool GraphicsClass::Initialize(const EngineOptions& options, HWND hwnd) {
 	}
 
 	// Add blank soft texture
-	m_TextureHolder->AddBlankSoftTexture(1024, 1024, "soft", ColorIntegers(0, 255, 0, 0));
+	m_TextureHolder->AddBlankSoftTexture(1024, 1024, "soft", ColorIntegers(0, 0, 0, 0));
 	m_TextureHolder->GetTexture("soft").LoadToGPU(m_Direct3D->GetDevice(), m_Direct3D->GetDeviceContext(), D3D11_USAGE_DYNAMIC, D3D11_CPU_ACCESS_WRITE);
 
 	// Create the model object.
@@ -86,7 +86,7 @@ bool GraphicsClass::Initialize(const EngineOptions& options, HWND hwnd) {
 	}
 
 	// Create scene object.
-	m_Scene = std::shared_ptr<SpecularPhongPointScene>(new SpecularPhongPointScene(options, m_TextureHolder->GetSharedTexture("soft"), m_TextureHolder->GetSharedTexture("stone01.tga")));
+	m_Scene = std::shared_ptr<SpecularPhongPointScene>(new SpecularPhongPointScene(m_TextureHolder->GetTexture("soft"), m_TextureHolder->GetTexture("stone01.tga")));
 	if (!m_Scene) {
 		return false;
 	}
@@ -118,17 +118,20 @@ void GraphicsClass::Update(const GameTimer& gt) {
 
 	//m_Model->Update(gt);
 	m_Camera->UpdateViewMatrix();
-	TextureClass& softTexture = m_TextureHolder->GetTexture("soft");
-	softTexture.DrawLine(0, 0, 512, 512, { 255, 0, 0, 0 });
-	softTexture.Update(m_Direct3D->GetDevice(), m_Direct3D->GetDeviceContext());
-
+	//m_Scene->GetCamera().RotateY(gt.DeltaTime() * (DirectX::XM_PI / 180.0f) * 15.0f);
+	m_Scene->GetCamera().Walk(-1.0f * gt.DeltaTime());
 	m_Scene->Update(gt.DeltaTime());
 }
 
 bool GraphicsClass::Frame() {
 	bool result;
 
+	TextureClass& softTexture = m_TextureHolder->GetTexture("soft");
+	softTexture.Clear(IntColors::MakeRGB(255u, 0u, 0u));
+	//softTexture.DrawLine(0, 0, 512, 512, { 255, 0, 0, 0 });
+
 	m_Scene->Draw();
+	m_TextureHolder->GetTexture("soft").Update(m_Direct3D->GetDevice(), m_Direct3D->GetDeviceContext());
 
 	// Render the graphics scene.
 	result = Render();

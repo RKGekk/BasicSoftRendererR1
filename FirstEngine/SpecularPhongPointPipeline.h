@@ -16,7 +16,7 @@ class GraphicsClass;
 
 class SpecularPhongPointPipeline {
 public:
-	SpecularPhongPointPipeline(const EngineOptions& options, std::shared_ptr<TextureClass> sysT);
+	SpecularPhongPointPipeline(TextureClass& sysT);
 
 	void Draw(IndexedTriangleList& triList);
 
@@ -71,7 +71,7 @@ private:
 	std::shared_ptr<NDCScreenTransformer>	pst;
 	std::shared_ptr<ZBuffer>				pZb;
 
-	std::shared_ptr<TextureClass>			mSysBuff;
+	TextureClass&							mSysBuff;
 
 	int										mWidth;
 	int										mHeight;

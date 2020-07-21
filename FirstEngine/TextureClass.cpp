@@ -130,9 +130,12 @@ void TextureClass::Update(ID3D11Device* device, ID3D11DeviceContext* deviceConte
 void TextureClass::Clear(ColorIntegers color) {
 
 	unsigned int* v = reinterpret_cast<unsigned int*>(m_Data.data());
+	std::fill(v, v + (m_Data.size() / 4), color.dword);
+
+	/*
 	for (UINT i = 0; i < m_Data.size() / 4; ++i) {
 		v[i] = color.dword;
-	}
+	}*/
 }
 
 bool TextureClass::CopyNoLoad(const TextureClass& src) {

@@ -22,5 +22,4 @@ public:
     void AddBlankSoftTexture(unsigned int width, unsigned int height, const std::string& name, ColorIntegers color);
 
     static TextureClass& GetTexture(std::string const& filename);
-    static std::shared_ptr<TextureClass> GetSharedTexture(std::string const& filename);
 };

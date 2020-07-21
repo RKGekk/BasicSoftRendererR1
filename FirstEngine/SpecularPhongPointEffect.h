@@ -181,6 +181,7 @@ public:
 			DirectX::XMStoreFloat4(&out.pos,		DirectX::XMVector4Transform(posXM,	worldViewProjXM));
 			DirectX::XMStoreFloat3(&out.n,			DirectX::XMVector4Transform(nXM,	worldViewXM));
 			DirectX::XMStoreFloat3(&out.worldPos,	DirectX::XMVector4Transform(posXM,	worldViewXM));
+			out.t = v.t;
 
 			return out;
 		}

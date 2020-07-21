@@ -65,7 +65,3 @@ TextureClass& TextureHolder::GetTexture(std::string const& filename) {
 		throw;
 	}
 }
-
-std::shared_ptr<TextureClass> TextureHolder::GetSharedTexture(std::string const& filename) {
-	return std::shared_ptr<TextureClass>(&GetTexture(filename));
-}

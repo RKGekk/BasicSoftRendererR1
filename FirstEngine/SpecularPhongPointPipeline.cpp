@@ -2,11 +2,10 @@
 
 #include "GraphicsClass.h"
 
-SpecularPhongPointPipeline::SpecularPhongPointPipeline(const EngineOptions& options, std::shared_ptr<TextureClass> sysT) {
+SpecularPhongPointPipeline::SpecularPhongPointPipeline(TextureClass& sysT) : mSysBuff(sysT) {
 
-	mWidth		= options.m_screenWidth;
-	mHeight		= options.m_screenHeight;
-	mSysBuff	= sysT;
+	mWidth		= sysT.GetWidth();
+	mHeight		= sysT.GetHeight();
 	pZb			= std::make_shared<ZBuffer>(mWidth, mHeight);
 	pst			= std::make_shared<NDCScreenTransformer>(mWidth, mHeight);
 }
@@ -285,7 +284,7 @@ void SpecularPhongPointPipeline::DrawFlatTriangle(SpecularPhongPointEffect::VSOu
 				auto attr = iLine * w;
 				// invoke pixel shader with interpolated vertex attributes
 				// and use result to set the pixel color on the screen
-				mSysBuff->PutPixel(x, y, effect.ps(attr));
+				mSysBuff.PutPixel(x, y, effect.ps(attr));
 			}
 		}
 	}
