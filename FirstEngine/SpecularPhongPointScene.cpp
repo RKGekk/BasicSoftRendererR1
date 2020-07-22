@@ -9,7 +9,7 @@ SpecularPhongPointScene::SpecularPhongPointScene(TextureClass& sysT, TextureClas
 
 	// Set the initial position of the camera.
 	m_Camera.SetPosition(0.0f, 0.0f, -1.0f);
-	m_Camera.SetLens(hfov, aspect_ratio, 1.0f, 1000.0f);
+	m_Camera.SetLens(DirectX::XMConvertToRadians(hfov), aspect_ratio, 1.0f, 1000.0f);
 
 	// load walls
 	DirectX::XMFLOAT4X4 wallWorld;
